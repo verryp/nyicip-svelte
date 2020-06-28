@@ -1,5 +1,26 @@
 <script>
   import Emoji from "./Emoji.svelte";
+
+  let currentEmoji = "😁";
+  const emojis = [
+    "😆",
+    "😼",
+    "👷",
+    "👩‍🚀",
+    "🥕",
+    "👕",
+    "🦆",
+    "😇",
+    "👋",
+    "👴",
+    "🐍",
+    "🚗"
+  ];
+
+  const randomizeEmoji = () =>
+    emojis[Math.floor(Math.random() * emojis.length)];
+
+  const handleRandomize = () => (currentEmoji = randomizeEmoji());
 </script>
 
 <style>
@@ -44,6 +65,6 @@
 
 <main>
   <h1>Randomize Emoji</h1>
-  <Emoji />
-  <button>Randomize</button>
+  <Emoji {currentEmoji} />
+  <button on:click={handleRandomize}>Randomize</button>
 </main>
