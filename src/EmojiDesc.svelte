@@ -2,6 +2,10 @@
   let desciption = "";
   $: totalChars = desciption.length;
   $: totalWords = desciption.split(" ").length;
+
+  $: if (desciption.length > 5) {
+    console.log("banana");
+  }
 </script>
 
 <style>
