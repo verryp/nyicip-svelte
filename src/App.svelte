@@ -1,5 +1,6 @@
 <script>
   import Emoji from "./Emoji.svelte";
+  import EmojiDesc from "./EmojiDesc.svelte";
 
   let currentEmoji = "😁";
   const emojis = [
@@ -66,5 +67,6 @@
 <main>
   <h1>Randomize Emoji</h1>
   <Emoji {currentEmoji} />
+  <EmojiDesc />
   <button on:click={handleRandomize}>Randomize</button>
 </main>
